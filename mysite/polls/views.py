@@ -1,4 +1,5 @@
 from .models import Question
+from django.http import Http404
 from django.shortcuts import render
 
 def index(request):
