@@ -57,7 +57,7 @@ ROOT_URLCONF = 'djangostripe.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], # new
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# settings.py
+STRIPE_SECRET_KEY = 'sk_test_CKhY3B72JlPjNAM0S8MmQscw'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_W63C5PiHdw3FSQmvVIrgWo6c'
