@@ -1,0 +1,16 @@
+<!-- templates/payme.html -->
+
+{% extends "blog/base.html" %}
+{% block content %}
+
+<h2>PAY Me $5.00</h2>
+
+<form action="{% url 'charged' %}" method="post">
+    {% csrf_token %}
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="A Django Charge"
+            data-amount="500"
+            data-locale="auto"></script>
+  </form>
+{% endblock content %}
