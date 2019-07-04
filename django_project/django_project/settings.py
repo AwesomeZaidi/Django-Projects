@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'payments.apps.PaymentsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL ='blog-home'
+LOGIN_URL = 'login'
+
+STRIPE_SECRET_KEY = 'sk_test_CKhY3B72JlPjNAM0S8MmQscw'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_W63C5PiHdw3FSQmvVIrgWo6c'
